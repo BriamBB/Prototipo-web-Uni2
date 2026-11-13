@@ -181,6 +181,17 @@ footer img{width:84px}
 .lista-c li b{white-space:nowrap}.lista-c .total{border-bottom:0;border-top:2px solid #000;font-weight:800;font-size:1.05rem}
 .costos details h3{margin-top:1.4rem}
 @media (max-width:860px){.costos-g{grid-template-columns:1fr}}
+
+.planes{display:grid;grid-template-columns:1fr 1.5fr;gap:2rem;margin-top:2rem;align-items:start}
+.dinero .dos{margin-top:2rem}
+.precios{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1rem}
+.precio{margin:0;border:2px solid #000;background:var(--papel);padding:.4rem 1rem;font-weight:800;font-size:.9rem;box-shadow:3px 3px 0 #000}
+.precio b{display:block;font-family:var(--display);font-weight:400;font-size:1.9rem;line-height:1.1}
+.beneficios{list-style:none;margin:0;padding:0}
+.beneficios li{padding:.4rem 0 .4rem 1.6rem;position:relative;font-weight:600;border-bottom:1px dashed #000}
+.beneficios li:last-child{border-bottom:0}
+.beneficios li::before{content:"";position:absolute;left:0;top:.7rem;width:.9rem;height:.9rem;background:var(--morado);clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%)}
+@media (max-width:860px){.planes{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -307,16 +318,23 @@ footer img{width:84px}
 <section class="dinero">
   <div class="wrap">
     <h2>¿Cómo gana dinero Uni2?</h2>
-    <p>Es un modelo freemium: lo esencial es gratis y solo se paga por funciones extra. Los usuarios gratuitos generan la masa crítica y los suscriptores cubren los costos cada mes.</p>
-    <div class="tres">
-      <article class="ventana c-turq"><div class="barra"><span>Uni2 gratis</span><span class="ctl" aria-hidden="true">_ ✕</span></div><div class="cuerpo"><p>Match, foro y grupos de estudio sin costo. Es lo que atrae a la comunidad y crea la masa crítica que una red social necesita.</p></div></article>
-      <article class="ventana c-nar"><div class="barra"><span>Uni2 Plus · ingreso principal</span><span class="ctl" aria-hidden="true">_ ✕</span></div><div class="cuerpo"><p>Suscripción premium con pago recurrente mensual, solo por funciones extra. Convierte a los usuarios más activos en ingresos predecibles cada mes.</p></div></article>
-      <article class="ventana c-mor"><div class="barra"><span>Mentorías pagas</span><span class="ctl" aria-hidden="true">_ ✕</span></div><div class="cuerpo"><p>El pago se hace por una pasarela segura (Nequi, Daviplata o tarjeta) y el tutor estudiante recibe el 85 % del valor de la mentoría.</p></div></article>
+    <p>Es un modelo freemium: lo esencial es gratis y se paga por funciones extra. Los usuarios gratuitos crean la masa crítica y los suscriptores cubren los costos cada mes, con dos ingresos complementarios.</p>
+    <div class="planes">
+      <article class="ventana c-turq"><div class="barra"><span>Uni2 gratis</span><span class="ctl" aria-hidden="true">_ ✕</span></div><div class="cuerpo"><p style="margin:0">Match, foro y grupos de estudio sin costo. Es lo que atrae a la comunidad y crea la masa crítica que una red social necesita.</p></div></article>
+      <article class="ventana c-nar"><div class="barra"><span>Uni2 Plus · ingreso principal</span><span class="ctl" aria-hidden="true">_ ✕</span></div><div class="cuerpo">
+        <div class="precios"><p class="precio"><b>$15.000</b>por mes</p><p class="precio"><b>$60.000</b>por semestre</p></div>
+        <p>Suscripción con pago recurrente que desbloquea funciones avanzadas:</p>
+        <ul class="beneficios"><li>Filtros detallados por carrera o semestre</li><li>Deslizamientos ilimitados</li><li>Mayor visibilidad de perfil, con insignia o perfil destacado</li><li>Ver quién mostró interés en tu perfil</li><li>Prioridad en cupos de eventos</li><li>Beneficios exclusivos, como descuentos con negocios aliados</li></ul>
+      </div></article>
+    </div>
+    <div class="dos">
+      <article class="ventana c-mor"><div class="barra"><span>Ingreso complementario · Mentorías pagas</span><span class="ctl" aria-hidden="true">_ ✕</span></div><div class="cuerpo"><p style="margin:0">Uni2 cobra una comisión del 15 % por intermediar las mentorías académicas pagas. El tutor estudiante recibe el 85 % del valor, y el pago va por una pasarela segura (Nequi, Daviplata o tarjeta).</p></div></article>
+      <article class="ventana c-rojo"><div class="barra"><span>Ingreso complementario · Pauta local B2B</span><span class="ctl" aria-hidden="true">_ ✕</span></div><div class="cuerpo"><p style="margin:0">Pauta publicitaria para restaurantes y negocios cercanos al campus, que quieren llegar al flujo de estudiantes de UCompensar.</p></div></article>
     </div>
     <article class="ventana c-beige costos"><div class="barra"><span>Lo que cuesta mantener Uni2</span><span class="ctl" aria-hidden="true">_ ✕</span></div><div class="cuerpo">
       <div class="costos-g">
         <p class="grande">$1.660.000 <span>COP al mes en costos fijos</span></p>
-        <p>Como casi todo el costo es fijo, Uni2 necesita un ingreso que se repita cada mes: la suscripción Uni2 Plus. Los costos variables solo crecen cuando hay ventas.</p>
+        <p>Como casi todo el costo es fijo, Uni2 necesita un ingreso que se repita cada mes. Con Uni2 Plus a $15.000 al mes bastan unos <b>122 suscriptores</b> para cubrirlo (ya descontada la comisión de la pasarela), sin contar mentorías ni pauta. Los costos variables solo crecen cuando hay ventas.</p>
       </div>
       <details><summary>Ver desglose de costos</summary>
         <h3>Costos fijos (por mes)</h3><ul class="lista-c"><li><span>Honorarios equipo técnico (desarrollo)</span><b>$600.000</b></li><li><span>Honorarios equipo fundador</span><b>$450.000</b></li><li><span>Infraestructura en la nube (AWS / Firebase)</span><b>$200.000</b></li><li><span>Registro de marca ante la SIC (amortizado)</span><b>$100.000</b></li><li><span>Publicidad y activación en campus</span><b>$120.000</b></li><li><span>Licencias de tiendas móviles</span><b>$40.000</b></li><li><span>Habeas Data, dominio y servicios web</span><b>$90.000</b></li><li><span>Fondo de contingencias operativas</span><b>$60.000</b></li><li class="total"><span>Total</span><b>$1.660.000</b></li></ul>
